@@ -108,9 +108,9 @@ public class FooModelImpl extends BaseModelImpl<Foo> implements FooModel {
 	public static final String TABLE_SQL_DROP = "drop table SSB_Foo";
 	public static final String ORDER_BY_JPQL = " ORDER BY foo.field1 ASC";
 	public static final String ORDER_BY_SQL = " ORDER BY SSB_Foo.field1 ASC";
-	public static final String DATA_SOURCE = "liferayDataSource";
-	public static final String SESSION_FACTORY = "liferaySessionFactory";
-	public static final String TX_MANAGER = "liferayTransactionManager";
+	public static final String DATA_SOURCE = "GeoLocationDataSource";
+	public static final String SESSION_FACTORY = "GeoLocationSessionFactory";
+	public static final String TX_MANAGER = "GeoLocationTransactionManager";
 	public static final boolean ENTITY_CACHE_ENABLED = GetterUtil.getBoolean(com.liferay.blade.samples.servicebuilder.service.util.PropsUtil.get(
 				"value.object.entity.cache.enabled.com.liferay.blade.samples.servicebuilder.model.Foo"),
 			true);
