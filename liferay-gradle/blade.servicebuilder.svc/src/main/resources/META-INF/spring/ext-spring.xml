@@ -7,15 +7,8 @@
 	<bean id="GeoLocationDataSourceTarget" class="com.liferay.blade.samples.servicebuilder.jndi.ContextUtil" factory-method="getDataSource" lazy-init="true">
 		<constructor-arg><value>jdbc/GeoLocation</value></constructor-arg>
 	</bean>
-
 	<bean id="GeoLocationDataSource" class="org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy" lazy-init="true">
 		<property name="targetDataSource" ref="GeoLocationDataSourceTarget" />
-	</bean>
-
-	<bean id="GeoLocationSessionFactory" class="com.liferay.portal.dao.orm.hibernate.PortletSessionFactoryImpl" lazy-init="true">
-		<property name="dataSource" ref="GeoLocationDataSource" />
-		<property name="sessionFactoryClassLoader" ref="portletClassLoader" />
-		<property name="sessionFactoryImplementor" ref="GeoLocationHibernateSessionFactory" />
 	</bean>
 	<bean id="GeoLocationHibernateSessionFactory" class="com.liferay.portal.spring.hibernate.PortletHibernateConfiguration" lazy-init="true">
 		<property name="dataSource" ref="GeoLocationDataSource" />
