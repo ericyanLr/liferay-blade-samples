@@ -3,8 +3,8 @@
 
 <service-builder package-path="com.liferay.blade.samples.servicebuilder">
 	<namespace>SSB</namespace>
-	<entity local-service="true" name="Foo" remote-service="true" uuid="true">
-	<!--<entity name="Foo" table="foo" uuid="true" local-service="true" remote-service="false" data-source="sampleDataSource" session-factory="sampleSessionFactory" tx-manager="sampleTransactionManager">-->
+	<!--<entity local-service="true" name="Foo" remote-service="true" uuid="true">-->
+	<entity name="Foo" table="SSB_Foo" uuid="true" local-service="true" remote-service="true" data-source="GeoLocationDataSource" session-factory="GeoLocationSessionFactory" tx-manager="GeoLocationTransactionManager">
 
 		<!-- PK fields -->
 
